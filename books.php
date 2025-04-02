@@ -3,12 +3,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Novella Bookstore</title>
-  <link rel"stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Novalla Bookstore</title>
 </head>
 <body>
     <h1>Novalla Bookstore</h1>
+
+    <form method="GET" action="books.php">
+        <input type="text" name="search" placeholder="Search by title, author, or genre" value="<?php echo isset($_GET['search']) ? htmlspecialchars($_GET['search']) : ''; ?>">
+        <button type="submit">Search</button>
+    </form>
+
     <table border="1">
         <thead>
             <tr>
@@ -20,7 +25,17 @@
         </thead>
         <tbody>
             <?php
-            $sql = "SELECT title, author, genre, price FROM books";
+            $search = isset($_GET['search']) ? $conn->real_escape_string($_GET['search']) : '';
+
+            if ($search) {
+                $sql = "SELECT title, author, genre, price FROM books
+                        WHERE title LIKE '%$search%' 
+                           OR author LIKE '%$search%' 
+                           OR genre LIKE '%$search%'";
+            } else {
+                $sql = "SELECT title, author, genre, price FROM books";
+            }
+
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {
