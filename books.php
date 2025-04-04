@@ -25,33 +25,35 @@
         </thead>
         <tbody>
             <?php
-            $search = isset($_GET['search']) ? $conn->real_escape_string($_GET['search']) : '';
+            if (file_exists('books.txt')) {
+                $books = file('books.txt', FILE_IGNORE_NEW_LINES);
+                $search = isset($_GET['search']) ? $conn->real_escape_string($_GET['search']) : '';
+                
+                $found = false;
+                foreach ($books as $book) {
+                    list($title, $author, $genre, $price) = explode(" | ", $book);
 
-            if ($search) {
-                $sql = "SELECT title, author, genre, price FROM books
-                        WHERE title LIKE '%$search%' 
-                           OR author LIKE '%$search%' 
-                           OR genre LIKE '%$search%'";
-            } else {
-                $sql = "SELECT title, author, genre, price FROM books";
-            }
+                    if ($search === '' || 
+                        stripos($title, $search) !== false || 
+                        stripos($author, $search) !== false || 
+                        stripos($genre, $search) !== false) {
+                        
+                        echo "<tr>
+                                <td>$title</td>
+                                <td>$author</td>
+                                <td>$genre</td>
+                                <td>\$$price</td>
+                              </tr>";
+                        $found = true;
+                    }
+                }
 
-            $result = $conn->query($sql);
-
-            if ($result->num_rows > 0) {
-                while($row = $result->fetch_assoc()) {
-                    echo "<tr>
-                            <td>{$row['title']}</td>
-                            <td>{$row['author']}</td>
-                            <td>{$row['genre']}</td>
-                            <td>\${$row['price']}</td>
-                          </tr>";
+                if (!$found) {
+                    echo "<tr><td colspan='4'>No books found</td></tr>";
                 }
             } else {
                 echo "<tr><td colspan='4'>No books found</td></tr>";
             }
-
-            $conn->close();
             ?>
         </tbody>
     </table>
