@@ -1,23 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Novella</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novella</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header><h1>Welcome to Novella</h1></header>
-  <main>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="menu.html">Café Menu</a></li>
-            <li><a href="cart.html">Cart</a></li>
-            <li><a href="login.html">Login</a></li>
-          </ul>
-     </nav>
-    <button type="button" onclick="location.href='books.php'">Go to Books</button>
-  </main>
+    <header>
+        <div class="logo">
+            <h1>Novella</h1>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="coffee-menue.html">Coffee</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="welcome">
+        <h2>Welcome to Novella</h2>
+    </div>
+
+    <div class="description">
+        <p>Novella is a cozy place where you can enjoy a good book with a cup of coffee.</p>
+        <p>Explore our collection of books and our delicious coffee menu.</p>
+    </div>
+
+    <div class="image-container">
+        <img src="images/coffee.jpg" alt="Coffee" class="coffee-image">
+        <img src="images/books.jpg" alt="Books" class="books-image">
+    </div>
+
+
+
+
+    <footer>
+        <p>555 Coffee Ave <br>Booktown, BK 12345</p>
+        <p>Phone: (123) 456-7890</p>
+        <p>2023 Novella. All rights reserved.</p>
+        <p>Follow us on social media:</p>
+        <ul class="social-media">
+            <li><a href="#"><img src="images/facebook.png" alt="Facebook" class="social-icon"> Facebook</a></li>
+            <li><a href="#"><img src="images/instagram.png" alt="Instagram" class="social-icon"> Instagram</a></li>
+            <li><a href="#"><img src="images/tiktok.png" alt="TikTok" class="social-icon"> TikTok</a></li>
+        </ul>
+    </footer>
 </body>
 </html>
