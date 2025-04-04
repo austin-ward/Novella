@@ -27,7 +27,7 @@
             <?php
             if (file_exists('books.txt')) {
                 $books = file('books.txt', FILE_IGNORE_NEW_LINES);
-                $search = isset($_GET['search']) ? $conn->real_escape_string($_GET['search']) : '';
+                $search = isset($_GET['search']) ? strtolower(trim($_GET['search'])) : '';
                 
                 $found = false;
                 foreach ($books as $book) {
