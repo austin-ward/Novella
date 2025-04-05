@@ -7,7 +7,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #000000;
+    background-color: rgba(111, 89, 70, 1);
 }
 .logo {
     font-size: 24px;
@@ -74,4 +74,27 @@ header {
     height: 100%;
     object-fit: cover;
     display: block;
+}
+
+footer {
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.social-media-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; 
+    list-style: none;
+}
+.social-media-icons li {
+    text-decoration: none;
+}
+
+.social-media-icons img {
+    width: 30px;
+    height: auto; 
 }
