@@ -2,13 +2,52 @@ html{
     background-color: #f8f1e9;
 }
 
-.banner{
+}
+header {
     display: flex;
-    justify-content: center;
-    padding: 20px;
-    background-color: #849C58;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(111, 89, 70, 1);
+}
+.logo {
+    font-size: 24px;
+    color: #ffffff;
+    font-family: "Meddon", cursive;
+    font-weight: 400;
+    font-style: italic;
+    margin-left: 30px;    
+}
+.logo a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.2s ease-out;
+}
+.logo a:hover {
+    color: #e9bc88;
+    transition: color 0.2s ease-in;
+}
+.nav-list {
+    margin-right: 30px;
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+.nav-list a {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ffffff;
 }
 
+.nav-list a:hover {
+    color: #e9bc88;
+    transition: color 0.2s ease-in;    
+}
+.nav-list a {
+    transition: color 0.2s ease-out;
+}
 .title{
     display: flex;
     justify-content: center;
