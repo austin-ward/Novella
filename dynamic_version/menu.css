@@ -1,0 +1,436 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(111, 89, 70, 1);
+}
+.logo {
+    font-size: 24px;
+    color: #ffffff;
+    font-family: "Mea Culpa", cursive;
+    font-weight: 400;
+    font-style: normal;   
+}
+.logo a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.2s ease-out;
+}
+.logo a:hover {
+    color: #e9bc88;
+    transition: color 0.2s ease-in;
+}
+.nav-list {
+    margin-right: 30px;
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+.nav-list a {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.nav-list a:hover {
+    color: #e9bc88;
+    transition: color 0.2s ease-in;    
+}
+.nav-list a {
+    transition: color 0.2s ease-out;
+}
+.title{
+    display: flex;
+    justify-content: center;
+    color: #849C58;
+    font-size: 50px;
+    margin: 0;
+}
+
+.title-desc{
+    display: flex;
+    justify-content: center;
+    color: #849C58;
+    font-size: 12px;
+    margin:0;
+    margin-top: -60px; /* Adjust this value as needed */
+}
+
+.content {
+    display: flex;
+    justify-content: center;  /* Center horizontally */
+    align-items: center;      /* Center vertically */
+    height: 100vh;            /* Full viewport height */
+    margin: 0;
+    color: #849C58;
+}
+
+.container{
+    background-color: #f8f1e9;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    border: 3px solid #849C58;
+    border-radius: 3px;
+    width: 90%;
+    position: absolute;
+    top: 40%;
+}
+
+.section{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between; /* Distributes items evenly */
+    width: 90%;
+    gap: 25px;
+    background-color: #f8f1e9;
+    margin-bottom: 20px;
+}
+
+.section-title{
+    display:flex;
+    justify-content: center;
+    text-align: center; /* Center the text */
+    width: 100%; /* Ensure it spans full width */
+    margin-top:40px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15%;
+    width: calc(50% - 200px); /* Two items per row (adjustable) */
+   
+}
+
+.item-name {
+    display: flex;
+    font-weight: bold;
+}
+
+.item-price {
+    display: flex;
+}
+
+.footer-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #849C58;
+    color: white;
+    position: fixed; /* Sticks to the bottom */
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    html{
+        background-color: #f8f1e9;
+    }
+    
+    .banner{
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        background-color: #849C58;
+    }
+    
+    .title{
+        display: flex;
+        justify-content: center;
+        color: #849C58;
+        font-size: 50px;
+        margin: 0;
+    }
+    
+    .title-desc{
+        display: flex;
+        justify-content: center;
+        color: #849C58;
+        font-size: 12px;
+        margin:0;
+        margin-top: -60px; /* Adjust this value as needed */
+    }
+    
+    .content {
+        display: flex;
+        justify-content: center;  /* Center horizontally */
+        align-items: center;      /* Center vertically */
+        height: 100vh;            /* Full viewport height */
+        margin: 0;
+        color: #849C58;
+    }
+    
+    .container{
+        background-color: #f8f1e9;
+        display: flex;
+        flex-wrap:wrap;
+        justify-content: center;
+        border: 3px solid #849C58;
+        border-radius: 3px;
+        width: 90%;
+        position: absolute;
+        top: 40%;
+    }
+    
+    .section{
+        display: flex;
+        flex-wrap:wrap;
+        justify-content: space-between; /* Distributes items evenly */
+        width: 90%;
+        gap: 5px;
+        background-color: #f8f1e9;
+        margin-bottom: 20px;
+    }
+    
+    .section-title{
+        display:flex;
+        justify-content: center;
+        text-align: center; /* Center the text */
+        width: 100%; /* Ensure it spans full width */
+        margin-top:40px;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    
+    .menu-item {
+        display: flex;
+        flex-direction: column;
+
+    }
+    
+    .item-name {
+        display: flex;
+        font-weight: bold;
+        font-size: 15px;
+    }
+    
+    .item-price {
+        display: flex;
+    }
+    
+    .footer-banner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        background-color: #849C58;
+        color: white;
+        position: fixed; /* Sticks to the bottom */
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+}
+
+@media (max-width: 700px) {
+    html{
+        background-color: #f8f1e9;
+    }
+    
+    .banner{
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        background-color: #849C58;
+    }
+    
+    .title{
+        display: flex;
+        justify-content: center;
+        color: #849C58;
+        font-size: 50px;
+        margin: 0;
+    }
+    
+    .title-desc{
+        display: flex;
+        justify-content: center;
+        color: #849C58;
+        font-size: 12px;
+        margin:0;
+        margin-top: -60px; /* Adjust this value as needed */
+    }
+    
+    .content {
+        display: flex;
+        justify-content: center;  /* Center horizontally */
+        align-items: center;      /* Center vertically */
+        height: 100vh;            /* Full viewport height */
+        margin: 0;
+        color: #849C58;
+    }
+    
+    .container{
+        background-color: #f8f1e9;
+        display: flex;
+        flex-wrap:wrap;
+        justify-content: center;
+        border: 3px solid #849C58;
+        border-radius: 3px;
+        width: 90%;
+        position: absolute;
+        top: 40%;
+    }
+    
+    .section{
+        display: flex;
+        flex-direction: column;
+        flex-wrap:wrap;
+        justify-content: space-between; /* Distributes items evenly */
+        width: 90%;
+        gap: 5px;
+        background-color: #f8f1e9;
+        margin-bottom: 20px;
+    }
+    
+    .section-title{
+        display:flex;
+        justify-content: center;
+        text-align: center; /* Center the text */
+        width: 100%; /* Ensure it spans full width */
+        margin-top:40px;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    
+    .menu-item {
+        display: flex;
+        flex-direction: column;
+
+    }
+    
+    .item-name {
+        display: flex;
+        font-weight: bold;
+        font-size: 15px;
+    }
+    
+    .item-price {
+        display: flex;
+    }
+    
+    .footer-banner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        background-color: #849C58;
+        color: white;
+        position: fixed; /* Sticks to the bottom */
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 480px) {
+    html{
+        background-color: #f8f1e9;
+    }
+    
+    .banner{
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        background-color: #849C58;
+    }
+    
+    .title{
+        display: flex;
+        justify-content: center;
+        color: #849C58;
+        font-size: 50px;
+        margin: 0;
+    }
+    
+    .title-desc{
+        display: flex;
+        justify-content: center;
+        color: #849C58;
+        font-size: 12px;
+        margin:0;
+        margin-top: -60px; /* Adjust this value as needed */
+    }
+    
+    .content {
+        display: flex;
+        justify-content: center;  /* Center horizontally */
+        align-items: center;      /* Center vertically */
+        height: 100vh;            /* Full viewport height */
+        margin: 0;
+        color: #849C58;
+    }
+    
+    .container{
+        background-color: #f8f1e9;
+        display: flex;
+        flex-wrap:wrap;
+        justify-content: center;
+        border: 3px solid #849C58;
+        border-radius: 3px;
+        width: 90%;
+        position: absolute;
+        top: 40%;
+    }
+    
+    .section{
+        display: flex;
+        flex-direction: column;
+        flex-wrap:wrap;
+        justify-content: space-between; /* Distributes items evenly */
+        width: 90%;
+        gap: 5px;
+        background-color: #f8f1e9;
+        margin-bottom: 20px;
+    }
+    
+    .section-title{
+        display:flex;
+        justify-content: center;
+        text-align: center; /* Center the text */
+        width: 100%; /* Ensure it spans full width */
+        margin-top:40px;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    
+    .menu-item {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+
+    }
+    
+    .item-name {
+        display: flex;
+        font-weight: bold;
+        font-size: 15px;
+    }
+    
+    .item-price {
+        display: flex;
+    }
+    
+    .footer-banner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        background-color: #849C58;
+        color: white;
+        position: fixed; /* Sticks to the bottom */
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+    }
+}
