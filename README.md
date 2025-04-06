@@ -8,3 +8,7 @@ Business Name: Novella
 # Technologies Used
 
 Technologies Used on the Menu & Bookstore Page: HTML, CSS, JavaScript, PHP, SQL
+
+## Dynamic Version hosts PHP and MySQL files
+
+
