@@ -1,3 +1,4 @@
+/* Fonts and General Styling */
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #f9f9f9;
@@ -5,7 +6,7 @@ body {
     padding: 20px;
 }
 
-/* Header and Navigation Styling */
+/* Header and Nav Bar Styling */
 header {
     display: flex;
     justify-content: space-between;
@@ -16,7 +17,8 @@ header {
 
 .logo {
     font-size: 24px;
-    font-family: 'Meddon', cursive;
+    color: #ffffff;
+    font-family: "Meddon", cursive;
     font-weight: 400;
     font-style: italic;
 }
@@ -32,11 +34,11 @@ header {
 }
 
 .navbar .nav-list {
+    margin: 0;
+    padding: 0;
     display: flex;
     gap: 30px;
     list-style: none;
-    margin: 0;
-    padding: 0;
 }
 
 .nav-list a {
@@ -48,6 +50,7 @@ header {
 
 .nav-list a:hover {
     color: #e9bc88;
+    transition: color 0.2s ease-in;
 }
 
 /* Table Styling */
