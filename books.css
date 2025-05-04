@@ -2,6 +2,9 @@
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #f9f9f9;
+}
+
+.container{
     margin: 0;
     padding: 20px;
 }
