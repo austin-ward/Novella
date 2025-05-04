@@ -1,6 +1,6 @@
 /* Fonts and General Styling */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: Arial, sans-serif;
     background-color: #f9f9f9;
 }
 
@@ -24,6 +24,7 @@ header {
     font-family: "Meddon", cursive;
     font-weight: 400;
     font-style: italic;
+    margin-left: 30px;    
 }
 
 .logo a {
@@ -34,6 +35,7 @@ header {
 
 .logo a:hover {
     color: #e9bc88;
+    transition: color 0.2s ease-in;
 }
 
 .navbar .nav-list {
