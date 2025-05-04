@@ -1,16 +1,17 @@
 CREATE TABLE users (
-  id INT IDENTITY(1,1) PRIMARY KEY,
-  username NVARCHAR(50) NOT NULL UNIQUE,
-  password NVARCHAR(255) NOT NULL
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  username VARCHAR(50) NOT NULL UNIQUE,
+  password VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE books (
-    id INT IDENTITY(1,1) PRIMARY KEY,
-    title NVARCHAR(255),
-    author NVARCHAR(255),
-    genre NVARCHAR(100),
-    price DECIMAL(5,2) NOT NULL
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(255) NOT NULL,
+  author VARCHAR(255),
+  genre VARCHAR(100),
+  price DECIMAL(7,2) NOT NULL
 );
+
 
 INSERT INTO books (title, author, genre, price) VALUES ('The Paper Garden', 'Molly Peacock', 'Biography', 16.95);
 INSERT INTO books (title, author, genre, price) VALUES ('The Midnight Library', 'Matt Haig', 'Fiction', 13.5);
