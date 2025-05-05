@@ -1,88 +1,89 @@
-/* Fonts and General Styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f9f9f9;
-}
-
-.container{
     margin: 0;
     padding: 20px;
 }
 
-/* Header and Nav Bar Styling */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(111, 89, 70, 1);
-    padding: 15px 30px;
+    background-color: #4a4e69;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    border-radius: 8px;
 }
 
-.logo {
-    font-size: 24px;
-    color: #ffffff;
-    font-family: "Meddon", cursive;
-    font-weight: 400;
-    font-style: italic;
-    margin-left: 30px;    
-}
-
-.logo a {
-    text-decoration: none;
-    color: #ffffff;
-    transition: color 0.2s ease-out;
-}
-
-.logo a:hover {
-    color: #e9bc88;
-    transition: color 0.2s ease-in;
-}
-
-.navbar .nav-list {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 30px;
-    list-style: none;
-}
-
-.nav-list a {
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #ffffff;
-    transition: color 0.2s ease-out;
-}
-
-.nav-list a:hover {
-    color: #e9bc88;
-    transition: color 0.2s ease-in;
-}
-
-/* Table Styling */
-table {
+.book-table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 30px;
-    background-color: white;
+    margin-top: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     border-radius: 8px;
+    border: 1px solid transparent;
     overflow: hidden;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-th, td {
-    padding: 15px;
+.book-table thead {
+    background-color: #f4f4f4;
+}
+
+.book-table thead th {
+    padding: 0.75rem 1rem;
     text-align: left;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #333;
+    transition: background-color 0.2s ease;
 }
 
-th {
-    background-color: #9a8c98;
-    color: white;
+.book-table thead th:hover {
+    background-color: #f0f8ff;
 }
 
-tr:nth-child(even) {
-    background-color: #f2f2f2;
+.book-table tbody tr:nth-child(even) {
+    background-color: #fafafa;
 }
 
-tr:hover {
-    background-color: #e0e0e0;
+.book-table tbody tr:hover {
+    background-color: #f0f8ff;
+}
+
+.book-table tbody td {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    color: #555;
+    border-bottom: 1px solid #eee;
+}
+
+@media (max-width: 640px) {
+    .book-table thead {
+        display: none;
+    }
+
+    .book-table,
+    .book-table tbody,
+    .book-table tr,
+    .book-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .book-table tr {
+        margin-bottom: 1rem;
+    }
+
+    .book-table td {
+        text-align: right;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    .book-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 1rem;
+        width: calc(50% - 2rem);
+        font-weight: 600;
+        text-align: left;
+    }
 }
