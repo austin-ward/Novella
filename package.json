@@ -1,0 +1,17 @@
+{
+  "name": "novella",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "dependencies": {
+    "pg": "^8.11.1"
+  },
+  "author": "",
+  "license": "ISC"
+}
