@@ -33,3 +33,8 @@ document.getElementById('loginForm').addEventListener('submit', async function (
     console.error(err);
   }
 });
+
+document.getElementById('registerButton').addEventListener('click', () => {
+  window.location.href = 'signup.html';
+});
+
