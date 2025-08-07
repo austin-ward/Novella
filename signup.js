@@ -1,5 +1,5 @@
 
-document.getElementById('signupForm').addEventListener('submit', async function (e) {
+document.getElementById('signup-form').addEventListener('submit', async function (e) {
   e.preventDefault();
 
   const email = document.getElementById('email').value;
